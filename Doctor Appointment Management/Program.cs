@@ -1,18 +1,12 @@
-using Doctor_Appointment_Management.Utility.Models;
 using Doctor_Appointment_Management.Utility.Models.Basic;
 using Doctor_Appointment_Management.DataContext;
-using Doctor_Appointment_Management.Repositories.Implementations;
-using Doctor_Appointment_Management.Repositories.Implementations.Common;
-using Doctor_Appointment_Management.Repositories.Interfaces;
-using Doctor_Appointment_Management.Repositories.Interfaces.Common;
-using Doctor_Appointment_Management.Services.Implementations;
-using Doctor_Appointment_Management.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Doctor_Appointment_Management.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -76,12 +70,7 @@ try
 
     //DI
     builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
-    builder.Services.AddScoped<IJwtService, JwtService>();
-    builder.Services.AddScoped<IUserService, UserService>();
-    builder.Services.AddScoped<IUserRepository, UserRepository>();
-
-    builder.Services.AddScoped<IAppointmentService, AppointmentService>();
-    builder.Services.AddScoped<IGenericRepository<Appointment>, GenericRepository<Appointment>>();
+    builder.Services.ConfigureDI(builder.Configuration);
 
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
