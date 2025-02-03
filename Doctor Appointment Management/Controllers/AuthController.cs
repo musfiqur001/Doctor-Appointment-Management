@@ -3,6 +3,7 @@ using Doctor_Appointment_Management.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Serilog;
 
 namespace Doctor_Appointment_Management.Controllers;
 
@@ -19,6 +20,7 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRegister model)
     {
+        Log.Fatal($"User {model.Username} trying to login at " + DateTime.Now);
         var tokenData = await _userService.AuthenticateAsync(model.Username, model.Password);
         return tokenData.Success ? Ok(tokenData) : BadRequest(tokenData);
     }
