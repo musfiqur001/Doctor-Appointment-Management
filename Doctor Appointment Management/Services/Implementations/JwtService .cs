@@ -1,4 +1,4 @@
-﻿using Doctor_Appointment_Management.DAM.Models.Basic;
+﻿using Doctor_Appointment_Management.Utility.Models.Basic;
 using Doctor_Appointment_Management.Services.Interfaces;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

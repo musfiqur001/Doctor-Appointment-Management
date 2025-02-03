@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Doctor_Appointment_Management.DAM.Models;
+namespace Doctor_Appointment_Management.Utility.Models;
 
 public class Doctor
 {

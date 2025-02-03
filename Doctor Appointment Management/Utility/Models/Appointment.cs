@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Doctor_Appointment_Management.DAM.Models;
+namespace Doctor_Appointment_Management.Utility.Models;
 
+[Table("Appointment")]
 public class Appointment
 {
     //[Key]
@@ -16,9 +17,9 @@ public class Appointment
     public string PatientContact { get; set; }
 
     //[Required]
-    public DateTime AppointmentDate { get; set; }
+    public DateTime AppointmentDateTime { get; set; }
 
     //[ForeignKey("Doctor")]
     public long DoctorId { get; set; }
-    public Doctor Doctor { get; set; }
+    public Doctor? Doctor { get; set; }
 }

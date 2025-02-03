@@ -1,4 +1,4 @@
-﻿using Doctor_Appointment_Management.DAM.Models;
+﻿using Doctor_Appointment_Management.Utility.Models;
 using Doctor_Appointment_Management.DataContext;
 using Doctor_Appointment_Management.Repositories.Interfaces;
 

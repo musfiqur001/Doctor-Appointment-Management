@@ -1,4 +1,4 @@
-﻿namespace Doctor_Appointment_Management.DAM.Models.Basic;
+﻿namespace Doctor_Appointment_Management.Utility.Models.Basic;
 
 public class JwtSettings
 {

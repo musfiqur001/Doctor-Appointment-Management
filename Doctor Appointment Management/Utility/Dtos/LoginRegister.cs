@@ -1,4 +1,4 @@
-﻿namespace Doctor_Appointment_Management.DAM.Dtos;
+﻿namespace Doctor_Appointment_Management.Utility.Dtos;
 
 public class LoginRegister
 {

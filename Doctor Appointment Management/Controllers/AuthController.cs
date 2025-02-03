@@ -1,7 +1,8 @@
-﻿using Doctor_Appointment_Management.DAM.Dtos;
+﻿using Doctor_Appointment_Management.Utility.Dtos;
 using Doctor_Appointment_Management.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Doctor_Appointment_Management.Controllers;
 
@@ -18,18 +19,14 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRegister model)
     {
-        var token = await _userService.AuthenticateAsync(model.Username, model.Password);
-        if (token == null)
-            return Unauthorized("Invalid credentials");
-        return Ok(new { Token = token });
+        var tokenData = await _userService.AuthenticateAsync(model.Username, model.Password);
+        return tokenData.Success ? Ok(tokenData) : BadRequest(tokenData);
     }
 
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] LoginRegister model)
     {
-        var user = await _userService.RegisterUserAsync(model.Username, model.Password);
-        if (user == null)
-            return BadRequest("Username is already taken");
-        return Ok(new { Message = "User registered successfully" });
+        var result = await _userService.RegisterUserAsync(model.Username, model.Password);
+        return result.Success ? Ok(result) : BadRequest(result);
     }
 }
