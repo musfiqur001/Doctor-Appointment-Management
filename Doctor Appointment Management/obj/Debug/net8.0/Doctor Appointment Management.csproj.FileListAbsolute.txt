@@ -1,0 +1,100 @@
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\appsettings.json
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Doctor Appointment Management.exe
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Doctor Appointment Management.deps.json
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Doctor Appointment Management.runtimeconfig.json
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Doctor Appointment Management.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Doctor Appointment Management.pdb
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.csproj.AssemblyReference.cache
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.AssemblyInfoInputs.cache
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.AssemblyInfo.cs
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.csproj.CoreCompileInputs.cache
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.sourcelink.json
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\staticwebassets\msbuild.Doctor Appointment Management.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\staticwebassets\msbuild.build.Doctor Appointment Management.props
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Doctor Appointment Management.props
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Doctor Appointment Management.props
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\scopedcss\bundle\Doctor Appointment Management.styles.css
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor A.1263B8AA.Up2Date
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\refint\Doctor Appointment Management.dll
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.pdb
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\Doctor Appointment Management.genruntimeconfig.cache
+C:\Users\Avenger\Desktop\CodeWork\Doctor-Appointment-Management\Doctor Appointment Management\obj\Debug\net8.0\ref\Doctor Appointment Management.dll

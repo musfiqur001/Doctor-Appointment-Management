@@ -4,7 +4,6 @@ using Doctor_Appointment_Management.Repositories.Interfaces.Common;
 using Doctor_Appointment_Management.Repositories.Interfaces;
 using Doctor_Appointment_Management.Services.Implementations;
 using Doctor_Appointment_Management.Services.Interfaces;
-using Doctor_Appointment_Management.Utility.Models.Basic;
 using Doctor_Appointment_Management.Utility.Models;
 
 namespace Doctor_Appointment_Management.Utility;

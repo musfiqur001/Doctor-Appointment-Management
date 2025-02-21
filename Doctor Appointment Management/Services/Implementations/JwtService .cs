@@ -1,20 +1,20 @@
-﻿using Doctor_Appointment_Management.Utility.Models.Basic;
-using Doctor_Appointment_Management.Services.Interfaces;
+﻿using Doctor_Appointment_Management.Services.Interfaces;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.Extensions.Configuration;
 
 namespace Doctor_Appointment_Management.Services.Implementations;
 
 public class JwtService: IJwtService
 {
-    private readonly JwtSettings _jwtSettings;
+    private readonly IConfiguration _configuration;
 
-    public JwtService(IOptions<JwtSettings> jwtSettings)
+    public JwtService(IConfiguration configuration)
     {
-        _jwtSettings = jwtSettings.Value;
+        _configuration = configuration;
     }
 
     public string GenerateToken(string username)
@@ -23,15 +23,24 @@ public class JwtService: IJwtService
         {
             new Claim(ClaimTypes.Name, username)
         };
+        var jwtSettings = new
+        {
+            key = _configuration.GetSection("JwtSettings:SecretKey").Value,
+            Issuer = _configuration.GetSection("JwtSettings:Issuer").Value,
+            Audience = _configuration.GetSection("JwtSettings:Audience").Value,
+            ExpiryMinutes = _configuration.GetValue<int>("JwtSettings:ExpiryMinutes")
+        };
+        if (jwtSettings is null)
+            throw new Exception("jwt settings is null");
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.key!));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken(
-            issuer: _jwtSettings.Issuer,
-            audience: _jwtSettings.Audience,
+            issuer: jwtSettings.Issuer,
+            audience: jwtSettings.Audience,
             claims: claims,
-            expires: DateTime.Now.AddMinutes(_jwtSettings.ExpiryMinutes),
+            expires: DateTime.Now.AddMinutes(jwtSettings.ExpiryMinutes),
             signingCredentials: creds
         );
 

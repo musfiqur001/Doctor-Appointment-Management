@@ -1,4 +1,3 @@
-using Doctor_Appointment_Management.Utility.Models.Basic;
 using Doctor_Appointment_Management.DataContext;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -26,17 +25,16 @@ try
     builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options =>
         {
-            var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
-
+            var jwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
             options.TokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuer = true,
                 ValidateAudience = true,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
-                ValidIssuer = jwtSettings.Issuer,
-                ValidAudience = jwtSettings.Audience,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey))
+                ValidIssuer = jwtSettingsSection["Issuer"],
+                ValidAudience = jwtSettingsSection["Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettingsSection["SecretKey"]!))
             };
         });
     //Login for swagger
@@ -69,7 +67,6 @@ try
     });
 
     //DI
-    builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
     builder.Services.ConfigureDI(builder.Configuration);
 
     builder.Services.AddControllers();
