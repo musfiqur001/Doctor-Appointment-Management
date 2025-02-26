@@ -5,13 +5,13 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration;
+using System.Security.Cryptography;
 
 namespace Doctor_Appointment_Management.Services.Implementations;
 
 public class JwtService: IJwtService
 {
     private readonly IConfiguration _configuration;
-
     public JwtService(IConfiguration configuration)
     {
         _configuration = configuration;
@@ -45,5 +45,9 @@ public class JwtService: IJwtService
         );
 
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+    public string GenerateRefreshToken()
+    {
+        return Convert.ToBase64String(RandomNumberGenerator.GetBytes(32));
     }
 }

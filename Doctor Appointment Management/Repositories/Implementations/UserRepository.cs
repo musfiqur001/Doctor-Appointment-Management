@@ -21,6 +21,10 @@ public class UserRepository: IUserRepository
     {
         return await Task.FromResult(_dbContext.Users.FirstOrDefault(u => u.Username == username));
     }
+    public async Task<User> GetUserByIdAsync(long id)
+    {
+        return await _dbContext.Users.FindAsync(id);
+    }
     public async Task<User> CreateUserAsync(User user)
     {
         _dbContext.Users.Add(user);

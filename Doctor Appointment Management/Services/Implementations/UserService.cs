@@ -10,11 +10,13 @@ public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
     private readonly IJwtService _jwtService;
+    private readonly IJwtRepository _jwtRepository;
 
-    public UserService(IUserRepository userRepository, IJwtService jwtService)
+    public UserService(IUserRepository userRepository, IJwtService jwtService, IJwtRepository jwtRepository)
     {
         _userRepository = userRepository;
         _jwtService = jwtService;
+        _jwtRepository = jwtRepository;
     }
 
     public async Task<ResultData> AuthenticateAsync(string username, string password)
@@ -29,8 +31,42 @@ public class UserService : IUserService
                 serviceResponse.Data = null;
                 return serviceResponse;
             }
-            var result = _jwtService.GenerateToken(user.Username);
-            serviceResponse.Data = result;
+            var accessToken = _jwtService.GenerateToken(user.Username);
+            var refreshToken = new RefreshToken()
+            {
+                Id = 0,
+                UserId = user.UserId,
+                Token = _jwtService.GenerateRefreshToken(),
+                ExpiresOn = DateTime.UtcNow.AddDays(7)
+            };
+            await _jwtRepository.CreateRefreshTokenAsync(refreshToken);
+            serviceResponse.Data = new { accessToken, refreshToken = refreshToken.Token };
+            serviceResponse.Message = ResponseMessage.Get;
+            serviceResponse.Success = true;
+            return serviceResponse;
+        }
+        catch (Exception ex)
+        {
+            serviceResponse.Message = ex.InnerException?.Message ?? ResponseMessage.Fail;
+            return serviceResponse;
+        }
+    }
+
+    public async Task<ResultData> LogInUserWithRefreshToken(string refreshToken = "Nothing Send From User")
+    {
+        ResultData serviceResponse = new ResultData();
+        try
+        {
+            var retrivedRefreshToken = await _jwtRepository.FindRefreshTokenAsync(refreshToken);
+            var retrivedRefreshTokenUser = await _userRepository.GetUserByIdAsync(retrivedRefreshToken.UserId);
+            if (retrivedRefreshToken == null || retrivedRefreshTokenUser == null)
+                throw new ApplicationException("The refresh token has expired");
+            var accessToken = _jwtService.GenerateToken(retrivedRefreshTokenUser.Username);
+            retrivedRefreshToken.Token = _jwtService.GenerateRefreshToken();
+            retrivedRefreshToken.ExpiresOn = DateTime.UtcNow.AddDays(7);
+            await _jwtRepository.UpdateRefreshTokenAsync(retrivedRefreshToken);
+
+            serviceResponse.Data = new { accessToken, refreshToken = retrivedRefreshToken.Token };
             serviceResponse.Message = ResponseMessage.Get;
             serviceResponse.Success = true;
             return serviceResponse;
@@ -59,7 +95,7 @@ public class UserService : IUserService
                 Password = hashedPassword
             };
             var result = await _userRepository.CreateUserAsync(newUser);
-            
+
             newUser.Password = "";
             serviceResponse.Data = newUser.Username;
             serviceResponse.Message = "User registered successfully";
