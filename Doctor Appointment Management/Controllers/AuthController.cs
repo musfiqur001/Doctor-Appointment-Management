@@ -24,6 +24,12 @@ public class AuthController : ControllerBase
         var tokenData = await _userService.AuthenticateAsync(model.Username, model.Password);
         return tokenData.Success ? Ok(tokenData) : BadRequest(tokenData);
     }
+    [HttpPost("LogInUserWithRefreshToken")]
+    public async Task<IActionResult> LogInUserWithRefreshToken(string refreshToken)
+    {
+        var tokenData = await _userService.LogInUserWithRefreshToken(refreshToken);
+        return tokenData.Success ? Ok(tokenData) : BadRequest(tokenData);
+    }
 
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] LoginRegister model)

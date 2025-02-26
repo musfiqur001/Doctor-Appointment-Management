@@ -8,6 +8,13 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+CREATE TABLE [dbo].[RefreshToken] (
+    Id BIGINT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    Token NVARCHAR(MAX) NOT NULL,
+    UserId BIGINT NOT NULL,
+    ExpiresOn DATETIME NOT NULL
+);
+GO
 CREATE TABLE [dbo].[Appointment](
 	[AppointmentId] [bigint] IDENTITY(1,1) NOT NULL,
 	[PatientName] [nvarchar](255) NOT NULL,
