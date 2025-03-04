@@ -7,4 +7,5 @@ public interface IJwtRepository
     Task<RefreshToken> CreateRefreshTokenAsync(RefreshToken data);
     Task<RefreshToken> UpdateRefreshTokenAsync(RefreshToken data);
     Task<RefreshToken> FindRefreshTokenAsync(string refreshToken);
+    Task<bool> DeleteExpiredRefreshTokenExceptThisAsync(long userId, string refreshToken);
 }

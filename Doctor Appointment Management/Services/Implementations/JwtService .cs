@@ -6,15 +6,21 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using System.Security.Cryptography;
+using Doctor_Appointment_Management.Utility.Common;
+using Doctor_Appointment_Management.Repositories.Interfaces;
+using Doctor_Appointment_Management.Utility.Models;
 
 namespace Doctor_Appointment_Management.Services.Implementations;
 
-public class JwtService: IJwtService
+public class JwtService : IJwtService
 {
     private readonly IConfiguration _configuration;
-    public JwtService(IConfiguration configuration)
+    private readonly IJwtRepository _jwtRepository;
+
+    public JwtService(IConfiguration configuration, IJwtRepository jwtRepository)
     {
         _configuration = configuration;
+        _jwtRepository = jwtRepository;
     }
 
     public string GenerateToken(string username)
@@ -50,4 +56,22 @@ public class JwtService: IJwtService
     {
         return Convert.ToBase64String(RandomNumberGenerator.GetBytes(32));
     }
+
+    public async Task<RefreshToken> CreateRefreshTokenAsync(RefreshToken data)
+    {
+        return await _jwtRepository.CreateRefreshTokenAsync(data);
+    }
+    public async Task<RefreshToken> UpdateRefreshTokenAsync(RefreshToken data)
+    {
+        return await _jwtRepository.UpdateRefreshTokenAsync(data);
+    }
+    public async Task<RefreshToken> FindRefreshTokenAsync(string refreshToken)
+    {
+        return await _jwtRepository.FindRefreshTokenAsync(refreshToken);
+    }
+    public async Task<bool> DeleteExpiredRefreshTokenExceptThisAsync(long userId, string refreshToken)
+    {
+        return await _jwtRepository.DeleteExpiredRefreshTokenExceptThisAsync(userId, refreshToken);
+    }
+
 }

@@ -35,4 +35,12 @@ public class JwtRepository : IJwtRepository
         return data;
     }
 
+    public async Task<bool> DeleteExpiredRefreshTokenExceptThisAsync(long userId, string refreshToken)
+    {
+        var expiredTokens = await _dbContext.RefreshTokens.Where(x=>x.UserId == userId && x.Token!= refreshToken && x.ExpiresOn<DateTime.Now).ToListAsync();
+        _dbContext.RefreshTokens.RemoveRange(expiredTokens);
+        var result = await _dbContext.SaveChangesAsync();
+        return result > 0;
+    }
+
 }

@@ -3,6 +3,7 @@ using Doctor_Appointment_Management.Repositories.Interfaces;
 using Doctor_Appointment_Management.Services.Interfaces;
 using System.Security.Cryptography;
 using Doctor_Appointment_Management.Utility.Common;
+using Doctor_Appointment_Management.Repositories.Implementations;
 
 namespace Doctor_Appointment_Management.Services.Implementations;
 
@@ -10,13 +11,11 @@ public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
     private readonly IJwtService _jwtService;
-    private readonly IJwtRepository _jwtRepository;
 
     public UserService(IUserRepository userRepository, IJwtService jwtService, IJwtRepository jwtRepository)
     {
         _userRepository = userRepository;
         _jwtService = jwtService;
-        _jwtRepository = jwtRepository;
     }
 
     public async Task<ResultData> AuthenticateAsync(string username, string password)
@@ -39,7 +38,7 @@ public class UserService : IUserService
                 Token = _jwtService.GenerateRefreshToken(),
                 ExpiresOn = DateTime.UtcNow.AddDays(7)
             };
-            await _jwtRepository.CreateRefreshTokenAsync(refreshToken);
+            await _jwtService.CreateRefreshTokenAsync(refreshToken);
             serviceResponse.Data = new { accessToken, refreshToken = refreshToken.Token };
             serviceResponse.Message = ResponseMessage.Get;
             serviceResponse.Success = true;
@@ -57,14 +56,17 @@ public class UserService : IUserService
         ResultData serviceResponse = new ResultData();
         try
         {
-            var retrivedRefreshToken = await _jwtRepository.FindRefreshTokenAsync(refreshToken);
-            var retrivedRefreshTokenUser = await _userRepository.GetUserByIdAsync(retrivedRefreshToken.UserId);
-            if (retrivedRefreshToken == null || retrivedRefreshTokenUser == null)
+            var retrivedRefreshToken = await _jwtService.FindRefreshTokenAsync(refreshToken);
+            if (retrivedRefreshToken == null)
                 throw new ApplicationException("The refresh token has expired");
+            var retrivedRefreshTokenUser = await _userRepository.GetUserByIdAsync(retrivedRefreshToken.UserId);
+            if (retrivedRefreshTokenUser == null)
+                throw new ApplicationException("The refresh token has expired");
+            await _jwtService.DeleteExpiredRefreshTokenExceptThisAsync(retrivedRefreshToken.UserId, retrivedRefreshToken.Token);
             var accessToken = _jwtService.GenerateToken(retrivedRefreshTokenUser.Username);
             retrivedRefreshToken.Token = _jwtService.GenerateRefreshToken();
             retrivedRefreshToken.ExpiresOn = DateTime.UtcNow.AddDays(7);
-            await _jwtRepository.UpdateRefreshTokenAsync(retrivedRefreshToken);
+            await _jwtService.UpdateRefreshTokenAsync(retrivedRefreshToken);
 
             serviceResponse.Data = new { accessToken, refreshToken = retrivedRefreshToken.Token };
             serviceResponse.Message = ResponseMessage.Get;
