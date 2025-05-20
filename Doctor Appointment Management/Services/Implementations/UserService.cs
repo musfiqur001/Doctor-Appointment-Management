@@ -30,7 +30,7 @@ public class UserService : IUserService
                 serviceResponse.Data = null;
                 return serviceResponse;
             }
-            var accessToken = _jwtService.GenerateToken(user.Username);
+            var accessToken = _jwtService.GenerateAccessToken(user.Username);
             var refreshToken = new RefreshToken()
             {
                 Id = 0,
@@ -63,7 +63,7 @@ public class UserService : IUserService
             if (retrivedRefreshTokenUser == null)
                 throw new ApplicationException("The refresh token has expired");
             await _jwtService.DeleteExpiredRefreshTokenExceptThisAsync(retrivedRefreshToken.UserId, retrivedRefreshToken.Token);
-            var accessToken = _jwtService.GenerateToken(retrivedRefreshTokenUser.Username);
+            var accessToken = _jwtService.GenerateAccessToken(retrivedRefreshTokenUser.Username);
             retrivedRefreshToken.Token = _jwtService.GenerateRefreshToken();
             retrivedRefreshToken.ExpiresOn = DateTime.UtcNow.AddDays(7);
             await _jwtService.UpdateRefreshTokenAsync(retrivedRefreshToken);

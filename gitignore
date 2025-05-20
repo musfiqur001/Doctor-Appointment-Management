@@ -1,5 +1,5 @@
-**/.vs
-**/bin
-**/obj
-**/*.user
+**/.vs/*
+**/bin/8
+**/obj/*
+**/*.user/*
 **/Logs/*

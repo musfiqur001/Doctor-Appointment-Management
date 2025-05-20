@@ -23,7 +23,7 @@ public class JwtService : IJwtService
         _jwtRepository = jwtRepository;
     }
 
-    public string GenerateToken(string username)
+    public string GenerateAccessToken(string username)
     {
         var claims = new[]
         {

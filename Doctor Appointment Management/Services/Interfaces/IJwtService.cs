@@ -4,7 +4,7 @@ namespace Doctor_Appointment_Management.Services.Interfaces;
 
 public interface IJwtService
 {
-    string GenerateToken(string username);
+    string GenerateAccessToken(string username);
     string GenerateRefreshToken();
     Task<RefreshToken> CreateRefreshTokenAsync(RefreshToken data);
     Task<RefreshToken> UpdateRefreshTokenAsync(RefreshToken data);
