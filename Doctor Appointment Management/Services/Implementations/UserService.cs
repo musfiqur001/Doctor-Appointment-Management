@@ -36,7 +36,7 @@ public class UserService : IUserService
                 Id = 0,
                 UserId = user.UserId,
                 Token = _jwtService.GenerateRefreshToken(),
-                ExpiresOn = DateTime.UtcNow.AddDays(7)
+                ExpiresOn = DateTime.Now.AddDays(7)
             };
             await _jwtService.CreateRefreshTokenAsync(refreshToken);
             serviceResponse.Data = new { accessToken, refreshToken = refreshToken.Token };
@@ -65,7 +65,7 @@ public class UserService : IUserService
             await _jwtService.DeleteExpiredRefreshTokenExceptThisAsync(retrivedRefreshToken.UserId, retrivedRefreshToken.Token);
             var accessToken = _jwtService.GenerateAccessToken(retrivedRefreshTokenUser.Username);
             retrivedRefreshToken.Token = _jwtService.GenerateRefreshToken();
-            retrivedRefreshToken.ExpiresOn = DateTime.UtcNow.AddDays(7);
+            retrivedRefreshToken.ExpiresOn = DateTime.Now.AddDays(7);
             await _jwtService.UpdateRefreshTokenAsync(retrivedRefreshToken);
 
             serviceResponse.Data = new { accessToken, refreshToken = retrivedRefreshToken.Token };

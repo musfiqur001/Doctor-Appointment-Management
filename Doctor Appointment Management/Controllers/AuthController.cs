@@ -17,7 +17,7 @@ public class AuthController : ControllerBase
         _userService = userService;
     }
 
-    [HttpPost("login")]
+    [HttpPost("Login")]
     public async Task<IActionResult> Login([FromBody] LoginRegister model)
     {
         Log.Fatal($"User {model.Username} trying to login at " + DateTime.Now);
@@ -31,7 +31,7 @@ public class AuthController : ControllerBase
         return tokenData.Success ? Ok(tokenData) : BadRequest(tokenData);
     }
 
-    [HttpPost("register")]
+    [HttpPost("Register")]
     public async Task<IActionResult> Register([FromBody] LoginRegister model)
     {
         var result = await _userService.RegisterUserAsync(model.Username, model.Password);
